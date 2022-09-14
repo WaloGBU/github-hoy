@@ -1,0 +1,155 @@
+/*Unidad de medida relativa REM*/
+/*1rem = 16px*/
+
+/*Unidad de medida relativa EM*/
+/*Equivale al valor más próximo anterior*/
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos generales*/
+body{
+    background-color: #ECEEF3;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Estilos del Header*/
+header{
+    display: none;
+}
+
+header h1{
+    padding: 1rem;
+}
+
+/*Estilos del main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2{
+    text-align: center;
+    color: #182941;
+    margin: 1rem;
+}
+
+main h2 span{
+    display: block;
+}
+
+main p{
+    text-align: center;
+}
+
+main .boton{
+    background-color: #51B0DF;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
+/*Estilos de section*/
+section{
+    display: none;
+}
+
+/*Estilos de footer*/
+footer h4{
+    text-align: center;
+}
+
+/*Media Queries*/
+@media screen and (min-width:600px){
+    header{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header nav ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    header nav ul li{
+        font-weight: bold;
+    }
+
+    /*Estilos nuevos del main*/
+    main{
+        height: 65vh;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
+        grid-template-areas: 
+        "p img"
+        "h2 img"
+        "p-dos img"
+        "boton img";
+        justify-content: center;
+        justify-items: center;
+    }
+
+    main p{
+        grid-area: p;
+    }
+
+    main img{
+        grid-area: img;
+        width: 60%;
+        margin: 1rem;
+    }
+
+    main h2{
+        grid-area: h2;
+        font-size: 1.7rem;
+    }
+
+    main .p-dos {
+        grid-area: p-dos;
+    }
+
+    main .boton{
+        grid-area: boton;
+    }
+
+    /*Estilos de section*/
+    section{
+        background-color: #BEE0F1;
+        display: block;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    section div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section div img{
+        width: 20%;
+    }
+
+    section div p{
+        text-align: center;
+    }
+    
+    /*Estilos de footer*/
+    footer{
+        margin: 1.3rem;
+    }
+}
